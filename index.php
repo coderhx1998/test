@@ -27,7 +27,7 @@ class test
   			for($i = 2; $i < count($massiv); $i++){
 
   				if(isset($massiv[$i]) && ($i === 2)){
-  					$str .= "\t".strval($massiv[$i]);
+  					$str .= strval($massiv[$i]);
   				}
 
   				if(isset($massiv[$i]) && ($i > 2)){
@@ -50,7 +50,7 @@ class test
   			for($i = 2; $i < count($massiv); $i++){
 
   				if(isset($massiv[$i]) && ($i === 2)){
-  					$str .= "\t".strval($massiv[$i]);
+  					$str .= strval($massiv[$i]);
   				}
 
   				if(isset($massiv[$i]) && ($i > 2)){
@@ -72,29 +72,35 @@ class test
 
 		if($this->argument[1] === 'summary'){
 
+			$this->detect($this->argument);
+
 			if(isset($this->argument[2]) && (!isset($this->argument[3]))){
 				echo $this->argument[2];
 			}
 			elseif(isset($this->argument[2]) && isset($this->argument[3]))
 				echo $this->argument[2] + $this->argument[3];
 
-				$this->detect($this->argument);
+				
 
 			}
 
 		if($this->argument[1] === 'generator'){
+
+				$this->detect($this->argument);
 
 				if(isset($this->argument[2])){
 					echo $this->randomCode($this->argument[2]);
 				}
 				else echo $this->randomCode(10);
 
-				$this->detect($this->argument);
+				
 
 
 			}
 
 		if($this->argument[1] === 'logger'){
+
+				$this->detect($this->argument);
 
 				//echo "logger";
 
