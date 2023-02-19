@@ -22,7 +22,7 @@ class test
 
   			$f = fopen("log.txt", 'w');
 
-  			$str = str_replace('pm','',date("Y-m-d h:i:sa"))."\t".$massiv[1];
+  			$str = substr(date("Y-m-d h:i:sa"),0,19)."\t".$massiv[1]."\t";
 
   			for($i = 2; $i < count($massiv); $i++){
 
@@ -45,7 +45,7 @@ class test
 
   			$f = fopen("log.txt", 'a');
   			
-  			$str = str_replace('pm','',date("Y-m-d h:i:sa"))."\t".$massiv[1];
+  			$str = substr(date("Y-m-d h:i:sa"),0,19)."\t".$massiv[1]."\t";
 
   			for($i = 2; $i < count($massiv); $i++){
 
